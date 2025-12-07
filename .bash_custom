@@ -1,2 +1,6 @@
 alias dotfiles="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 
+# Set up fzf key bindings and fuzzy completion
+eval "$(fzf --bash)"
+
+eval "$(zoxide init bash)"

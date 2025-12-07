@@ -34,7 +34,7 @@ fi
 
 echo "--> Install dependencies..."
 sudo apt update
-sudo apt install -y git mc vim
+sudo apt install -y git mc vim fzf zoxide
 
 
 if [ -d "$DOTFILES_DIR" ]; then
