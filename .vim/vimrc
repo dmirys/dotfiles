@@ -1,0 +1,6 @@
+" Default VIM config
+" Author: Dmitry Yastrebkov
+
+
+source ~/.vim/basic.vimrc
+
