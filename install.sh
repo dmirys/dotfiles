@@ -17,8 +17,9 @@ if [ "$1" == "-u" ] || [ "$1" == "--uninstall" ]; then
     
 	if [ -d "$DOTFILES_DIR" ]; then
 		echo "--> Removing files tracked by dotfiles repository..."
-		FILES=$(/usr/bin/git --git-dir="$DOTFILES_DIR" --work-tree="$HOME" ls-files)
+		FILES=$(git -C "$HOME" --git-dir="$DOTFILES_DIR" ls-files)
 		for file in $FILES; do
+			echo "    $HOME/$file"
 			rm -f "$HOME/$file"
 		done
 
